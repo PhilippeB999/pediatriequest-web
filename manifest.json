@@ -1,0 +1,17 @@
+{
+  "name": "PédiatrieQuest",
+  "short_name": "PédiatrieQuest",
+  "description": "Révision gamifiée en soins infirmiers pédiatriques.",
+  "lang": "fr-CA",
+  "start_url": "index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1c2126",
+  "theme_color": "#6B3FA0",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="ball" cx="38%" cy="30%" r="72%">
+      <stop offset="0%" stop-color="#c4a2e8"/>
+      <stop offset="45%" stop-color="#6b3fa0"/>
+      <stop offset="100%" stop-color="#40216a"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="29" fill="url(#ball)"/>
+  <!-- Ourson stylisé (repère pédiatrique) -->
+  <circle cx="21" cy="21" r="6.5" fill="#ffffff" opacity="0.93"/>
+  <circle cx="43" cy="21" r="6.5" fill="#ffffff" opacity="0.93"/>
+  <circle cx="32" cy="34" r="15" fill="#ffffff" opacity="0.93"/>
+  <circle cx="26.5" cy="31" r="2" fill="#6b3fa0"/>
+  <circle cx="37.5" cy="31" r="2" fill="#6b3fa0"/>
+  <circle cx="32" cy="39" r="5.5" fill="#e6d8f7"/>
+  <circle cx="32" cy="37.5" r="2" fill="#6b3fa0"/>
+</svg>

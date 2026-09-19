@@ -90,6 +90,17 @@ function escapeHtml(str) {
   }[c]));
 }
 
+/* Le logo de CFP doit en plus être une vraie URL http(s) — sinon on
+   l'ignore plutôt que de risquer un schéma javascript:/data: dans un src. */
+function safeImageUrl(url) {
+  try {
+    const u = new URL(url, location.href);
+    return (u.protocol === "https:" || u.protocol === "http:") ? u.href : "";
+  } catch (e) {
+    return "";
+  }
+}
+
 function loadState() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -652,7 +663,7 @@ function renderAccessGate() {
     <label class="field-label">${t("accessCodeTitle")}</label>
     <p class="tagline">${trialOver ? t("accessCodeTrialOver") : t("accessCodePrompt")}</p>
     <input id="accessCodeInput" type="text" autocapitalize="characters" maxlength="30"
-      placeholder="${t('accessCodePlaceholder')}" value="${draftAccessCode}"
+      placeholder="${t('accessCodePlaceholder')}" value="${escapeHtml(draftAccessCode)}"
       oninput="draftAccessCode=this.value" onkeydown="if(event.key==='Enter')submitAccessCode()" />
     <button class="cta" onclick="submitAccessCode()">${t("accessCodeSubmit")}</button>
     ${accessCodeStatus === "invalid" ? `<p class="access-error">${t("accessCodeInvalid")}</p>` : ""}
@@ -922,7 +933,7 @@ function renderClassJoin() {
     </div>
     <h1>👥 ${fr ? "Ma classe" : "My class"}</h1>
     ${state.cfpNom ? `<div class="cfp-banner">
-      ${state.cfpLogo ? `<img class="cfp-logo" src="${escapeHtml(state.cfpLogo)}" alt="" />` : ""}
+      ${safeImageUrl(state.cfpLogo) ? `<img class="cfp-logo" src="${escapeHtml(safeImageUrl(state.cfpLogo))}" alt="" />` : ""}
       <div class="cfp-text">
         <div class="cfp-name">${escapeHtml(state.cfpNom)}</div>
         ${state.programme ? `<div class="cfp-prog">${escapeHtml(state.programme)}</div>` : ""}
@@ -935,7 +946,7 @@ function renderClassJoin() {
     <label class="field-label">${fr ? "Code de la classe" : "Class code"}</label>
     <input id="classCodeInput" type="text" maxlength="20" autocapitalize="characters"
       placeholder="${fr ? "ex. BONAV-5220" : "e.g. BONAV-5220"}"
-      value="${draftClassCode}" oninput="draftClassCode=this.value"
+      value="${escapeHtml(draftClassCode)}" oninput="draftClassCode=this.value"
       style="text-transform:uppercase;letter-spacing:1px;text-align:center" />
 
     <div class="share-toggle ${draftShared ? "on" : ""}" onclick="toggleDraftShare()">

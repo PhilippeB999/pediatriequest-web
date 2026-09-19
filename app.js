@@ -80,6 +80,16 @@ let quizIndex = 0;
 /* Clé de sauvegarde d'un palier: "c01_2" = compétence c01, palier 2. */
 function tierKey(compId, level) { return `${compId}_${level}`; }
 
+/* Échappe une chaîne avant de l'insérer dans un template innerHTML. À utiliser pour
+   toute donnée qui ne vient pas d'un littéral du code (ex. cfpNom/cfpLogo/programme
+   reçus de Supabase) — même si c'est Philippe seul qui les saisit aujourd'hui, mieux
+   vaut ne jamais faire confiance à une chaîne stockée en base pour de l'affichage. */
+function escapeHtml(str) {
+  return String(str == null ? "" : str).replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+}
+
 function loadState() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -535,7 +545,7 @@ function header(activeTab) {
       <div>
         <div class="brand-name">${state.totem ? state.totem.emoji + " " + totemLabel(state.totem, state.lang) : ""}</div>
         <div class="brand-level">${state.shared && state.classCode
-          ? `👥 ${state.cfpNom || state.classCode}`
+          ? `👥 ${escapeHtml(state.cfpNom || state.classCode)}`
           : `${lvlName} · ${state.xp} ${t("xp")}`}</div>
       </div>
     </div>
@@ -912,10 +922,10 @@ function renderClassJoin() {
     </div>
     <h1>👥 ${fr ? "Ma classe" : "My class"}</h1>
     ${state.cfpNom ? `<div class="cfp-banner">
-      ${state.cfpLogo ? `<img class="cfp-logo" src="${state.cfpLogo}" alt="" />` : ""}
+      ${state.cfpLogo ? `<img class="cfp-logo" src="${escapeHtml(state.cfpLogo)}" alt="" />` : ""}
       <div class="cfp-text">
-        <div class="cfp-name">${state.cfpNom}</div>
-        ${state.programme ? `<div class="cfp-prog">${state.programme}</div>` : ""}
+        <div class="cfp-name">${escapeHtml(state.cfpNom)}</div>
+        ${state.programme ? `<div class="cfp-prog">${escapeHtml(state.programme)}</div>` : ""}
       </div>
     </div>` : ""}
     <p class="welcome-intro">${fr

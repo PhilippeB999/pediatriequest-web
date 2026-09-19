@@ -239,9 +239,12 @@ const COMPETENCIES = [
   ]
 },
 
-/* ---------- 2. Signes vitaux pédiatriques ---------- */
+/* ---------- 2. Signes vitaux pédiatriques ----------
+   ⚠️ id volontairement suffixé « _pedia » : SASIQuest utilise déjà l'id
+   "signes_vitaux". Sans ce suffixe, les deux programmes se partageraient la
+   même entrée MODULE_INFO dans le tableau de bord enseignant. */
 {
-  id: "signes_vitaux", order: 2,
+  id: "signes_vitaux_pedia", order: 2,
   title_fr: "Signes vitaux pédiatriques", title_en: "Pediatric Vital Signs",
   icon: "🩺",
   tiers: [

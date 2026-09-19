@@ -562,7 +562,7 @@ function progressPct() {
 const TRIAL_DURATION_MS = 7 * 24 * 60 * 60 * 1000; // essai gratuit de 7 jours
 // Liste des codes de licence valides. Le premier est le code « maître » de l'app ;
 // les suivants sont les codes clients (centres ayant acheté une licence).
-const ACCESS_CODES = ["PEDIA-2026-JOUE", "PEDIA-2026-DEMO"]; // PLACEHOLDERS — à finaliser avant vente. Contact : Jessica Ouellet (inf. enseignante).
+const ACCESS_CODES = ["PEDIA-2026-JOUE", "PEDIA-2026-DEMO", "ENVOL-2026-Q7MX"]; // ENVOL-2026-Q7MX = client CFP L'Envol (Philippe y travaille, licence traitée comme acquise). Les 2 autres restent des PLACEHOLDERS — à finaliser avant vente à d'autres centres. Contact contenu : Jessica Ouellet (inf. enseignante).
 const ACCESS_CODE = ACCESS_CODES[0]; // code maître (rétrocompatibilité)
 
 function isAccessGranted() {

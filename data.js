@@ -92,11 +92,11 @@ const COMPETENCIES = [
           explEn: "True. Weight doubles around 4 to 6 months and triples around 12 months: a classic growth landmark."
         },
         {
-          fr: "La fontanelle postérieure se ferme habituellement vers :",
-          en: "The posterior fontanelle usually closes around:",
+          fr: "La petite fontanelle POSTÉRIEURE (à l'arrière du crâne) se ferme habituellement vers :",
+          en: "The small POSTERIOR fontanelle (at the back of the skull) usually closes around:",
           choices: [ch("2 à 3 mois", "2 to 3 months", true), ch("6 mois", "6 months"), ch("12 à 18 mois", "12 to 18 months"), ch("24 mois", "24 months")],
-          explFr: "La fontanelle postérieure se ferme vers 2 à 3 mois ; l'antérieure (la plus grande) vers 12 à 18 mois.",
-          explEn: "The posterior fontanelle closes around 2 to 3 months; the anterior one (the largest) around 12 to 18 months."
+          explFr: "La fontanelle postérieure se ferme vers 2 à 3 mois ; l'antérieure (la plus grande, sur le dessus de la tête) vers 12 à 18 mois — ne pas confondre les deux.",
+          explEn: "The posterior fontanelle closes around 2 to 3 months; the anterior one (the largest, on top of the head) around 12 to 18 months — do not confuse the two."
         },
         {
           type: "tf",
@@ -119,8 +119,8 @@ const COMPETENCIES = [
       level: 2,
       questions: [
         {
-          fr: "La fontanelle antérieure se ferme habituellement entre :",
-          en: "The anterior fontanelle usually closes between:",
+          fr: "La grande fontanelle ANTÉRIEURE (sur le dessus de la tête) — différente de la petite fontanelle postérieure — se ferme habituellement entre :",
+          en: "The large ANTERIOR fontanelle (on top of the head) — different from the small posterior fontanelle — usually closes between:",
           choices: [ch("2 et 4 mois", "2 and 4 months"), ch("6 et 9 mois", "6 and 9 months"), ch("12 et 18 mois", "12 and 18 months", true), ch("24 et 36 mois", "24 and 36 months")],
           explFr: "Entre 12 et 18 mois. Une fermeture très précoce ou très tardive doit être signalée au médecin.",
           explEn: "Between 12 and 18 months. Very early or very late closure must be reported to the physician."

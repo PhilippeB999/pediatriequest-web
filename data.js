@@ -128,9 +128,11 @@ const COMPETENCIES = [
         {
           ...match("Associe chaque groupe d'âge à sa définition.", "Match each age group with its definition.", [
             pair("Nouveau-né", "Newborn", "De la naissance à 28 jours", "From birth to 28 days"),
-            pair("Nourrisson", "Infant", "De 1 mois à 12 mois", "From 1 month to 12 months"),
-            pair("Trottineur", "Toddler", "De 1 an à 3 ans", "From 1 to 3 years"),
-            pair("Âge scolaire", "School age", "De 6 ans à 11 ans", "From 6 to 11 years")
+            pair("Nourrisson", "Infant", "De 0 à 12 mois", "From 0 to 12 months"),
+            pair("Trottineur", "Toddler", "De 12 à 36 mois", "From 12 to 36 months"),
+            pair("Âge préscolaire", "Preschool age", "De 3 ans à 6 ans", "From 3 to 6 years"),
+            pair("Âge scolaire", "School age", "De 6 ans à 12 ans", "From 6 to 12 years"),
+            pair("Adolescence", "Adolescence", "De 12 ans à 18 ans", "From 12 to 18 years")
           ]),
           explFr: "Les groupes d'âge structurent toute la pédiatrie : normes de signes vitaux, doses, approche relationnelle et enseignement varient d'un groupe à l'autre.",
           explEn: "Age groups structure all of pediatrics: vital sign norms, doses, relational approach and teaching vary from one group to another."
@@ -261,9 +263,9 @@ const COMPETENCIES = [
         {
           fr: "Quelle est la fréquence respiratoire normale d'un nourrisson (1 à 12 mois) ?",
           en: "What is the normal respiratory rate of an infant (1 to 12 months)?",
-          choices: [ch("12 à 20 /min", "12 to 20 /min"), ch("20 à 25 /min", "20 to 25 /min"), ch("30 à 50 /min", "30 to 50 /min", true), ch("60 à 80 /min", "60 to 80 /min")],
-          explFr: "Environ 30 à 50 respirations/min chez le nourrisson, contre 12 à 20 chez l'adulte. Plus l'enfant est jeune, plus la fréquence est élevée.",
-          explEn: "About 30 to 50 breaths/min in infants, versus 12 to 20 in adults. The younger the child, the higher the rate."
+          choices: [ch("12 à 20 /min", "12 to 20 /min"), ch("20 à 25 /min", "20 to 25 /min"), ch("30 à 60 /min", "30 to 60 /min", true), ch("70 à 90 /min", "70 to 90 /min")],
+          explFr: "Environ 30 à 60 respirations/min chez le nourrisson, contre 12 à 20 chez l'adulte. Plus l'enfant est jeune, plus la fréquence est élevée.",
+          explEn: "About 30 to 60 breaths/min in infants, versus 12 to 20 in adults. The younger the child, the higher the rate."
         },
         {
           type: "tf",
@@ -426,9 +428,9 @@ const COMPETENCIES = [
         {
           fr: "À quels moments l'indice d'Apgar est-il évalué chez le nouveau-né ?",
           en: "At what times is the Apgar score assessed in the newborn?",
-          choices: [ch("À 1 minute et à 5 minutes de vie", "At 1 minute and 5 minutes of life", true), ch("À 10 et 20 minutes de vie", "At 10 and 20 minutes of life"), ch("À 1 heure et à 24 heures", "At 1 hour and 24 hours"), ch("Uniquement à la naissance", "At birth only")],
-          explFr: "L'Apgar est coté à 1 et à 5 minutes (répété à 10 minutes si le score reste bas). Il évalue l'adaptation du nouveau-né à la vie extra-utérine.",
-          explEn: "Apgar is scored at 1 and 5 minutes (repeated at 10 minutes if the score stays low). It assesses the newborn's transition to extrauterine life."
+          choices: [ch("À 1, 5 et 10 minutes de vie", "At 1, 5 and 10 minutes of life", true), ch("À 15 et 30 minutes de vie", "At 15 and 30 minutes of life"), ch("À 1 heure et à 24 heures", "At 1 hour and 24 hours"), ch("Uniquement à la naissance", "At birth only")],
+          explFr: "L'Apgar est coté à 1, 5 et 10 minutes de vie. Il évalue l'adaptation du nouveau-né à la vie extra-utérine.",
+          explEn: "Apgar is scored at 1, 5 and 10 minutes of life. It assesses the newborn's transition to extrauterine life."
         },
         {
           fr: "Combien de critères l'indice d'Apgar comporte-t-il ?",
@@ -446,11 +448,11 @@ const COMPETENCIES = [
           explEn: "True. Back sleeping on a firm surface, with no pillow, duvet or bumper pads, reduces the risk of sudden infant death."
         },
         {
-          fr: "Quel médicament est administré par voie intramusculaire à tous les nouveau-nés à la naissance ?",
-          en: "Which medication is given intramuscularly to all newborns at birth?",
+          fr: "Quel médicament est administré par voie intramusculaire à tous les nouveau-nés à la naissance, notamment pour prévenir l'hémorragie cérébrale ?",
+          en: "Which medication is given intramuscularly to all newborns at birth, in part to prevent cerebral hemorrhage?",
           choices: [ch("La vitamine K", "Vitamin K", true), ch("La vitamine D", "Vitamin D"), ch("Un antibiotique à large spectre", "A broad-spectrum antibiotic"), ch("De l'acétaminophène", "Acetaminophen")],
-          explFr: "La vitamine K IM prévient la maladie hémorragique du nouveau-né. La vitamine D, elle, se donne par la bouche, chaque jour, au bébé allaité.",
-          explEn: "IM vitamin K prevents hemorrhagic disease of the newborn. Vitamin D, in contrast, is given orally every day to the breastfed infant."
+          explFr: "La vitamine K IM prévient la maladie hémorragique du nouveau-né, dont l'hémorragie cérébrale est la complication la plus grave. La vitamine D, elle, se donne par la bouche, chaque jour, au bébé allaité.",
+          explEn: "IM vitamin K prevents hemorrhagic disease of the newborn, of which cerebral hemorrhage is the most serious complication. Vitamin D, in contrast, is given orally every day to the breastfed infant."
         },
         {
           type: "tf",
@@ -1587,7 +1589,7 @@ const COMPETENCIES = [
         {
           fr: "Un enfant de 3 ans hurle et se débat avant une prise de sang. Quelle approche est la meilleure ?",
           en: "A 3-year-old screams and struggles before a blood draw. Which approach is best?",
-          choices: [ch("Position de confort dans les bras du parent, distraction adaptée et anesthésique topique si le délai le permet", "Comfort position in the parent's arms, appropriate distraction and topical anesthetic if time allows", true), ch("Immobiliser rapidement l'enfant à quatre personnes pour en finir", "Quickly restrain the child with four people to get it over with"), ch("Reporter indéfiniment le prélèvement", "Postpone the draw indefinitely"), ch("Menacer de faire une deuxième piqûre s'il bouge", "Threaten a second needle if they move")],
+          choices: [ch("Position de confort dans les bras du parent, distraction adaptée et anesthésique topique", "Comfort position in the parent's arms, appropriate distraction and topical anesthetic", true), ch("Immobiliser rapidement l'enfant à quatre personnes pour en finir", "Quickly restrain the child with four people to get it over with"), ch("Reporter indéfiniment le prélèvement", "Postpone the draw indefinitely"), ch("Menacer de faire une deuxième piqûre s'il bouge", "Threaten a second needle if they move")],
           explFr: "Les soins atraumatiques réduisent la détresse et le nombre de tentatives : position de confort, distraction, anesthésique topique, et personnel préparé.",
           explEn: "Atraumatic care reduces distress and the number of attempts: comfort positioning, distraction, topical anesthetic and a prepared team."
         },
@@ -1601,10 +1603,8 @@ const COMPETENCIES = [
         },
         {
           ...match("Associe chaque outil d'évaluation de la douleur à la clientèle visée.", "Match each pain assessment tool with its target population.", [
-            pair("Échelle comportementale (type FLACC)", "Behavioural scale (FLACC type)", "Enfant non verbal ou de moins de 3 ans", "Nonverbal child or child under 3 years"),
             pair("Échelle des visages", "Faces pain scale", "Enfant d'environ 4 à 8 ans", "Child of about 4 to 8 years"),
-            pair("Échelle numérique 0 à 10", "Numeric scale 0 to 10", "Enfant de 8 ans et plus, et adolescent", "Child 8 years and older, and adolescents"),
-            pair("Observation des signes physiologiques", "Observation of physiological signs", "Nouveau-né, en complément d'une échelle validée", "Newborn, as a complement to a validated scale")
+            pair("Échelle numérique 0 à 10", "Numeric scale 0 to 10", "Enfant de 8 ans et plus, et adolescent", "Child 8 years and older, and adolescents")
           ]),
           explFr: "Choisir le bon outil selon l'âge et la capacité d'expression est la base d'une prise en charge sérieuse de la douleur pédiatrique.",
           explEn: "Choosing the right tool for the child's age and ability to communicate is the foundation of serious pediatric pain management."
@@ -1705,11 +1705,12 @@ const COMPETENCIES = [
           explEn: "False. Children compensate for a long time: a drop in blood pressure is a late sign heralding imminent arrest. Rely on early signs."
         },
         {
-          fr: "Quelle est la dose de bolus liquidien habituellement utilisée chez l'enfant en choc hypovolémique ?",
-          en: "What fluid bolus dose is usually used in a child with hypovolemic shock?",
-          choices: [ch("5 mL/kg", "5 mL/kg"), ch("10 mL/kg", "10 mL/kg"), ch("20 mL/kg", "20 mL/kg", true), ch("50 mL/kg", "50 mL/kg")],
-          explFr: "Habituellement 20 mL/kg de cristalloïde isotonique, avec réévaluation après chaque bolus. ⚠️ Toujours selon l'ordonnance et le protocole du milieu.",
-          explEn: "Usually 20 mL/kg of isotonic crystalloid, with reassessment after each bolus. ⚠️ Always according to the order and facility protocol."
+          type: "tf",
+          fr: "L'infirmière auxiliaire a le droit d'installer un cathéter intraveineux chez un enfant de moins de 14 ans.",
+          en: "A licensed practical nurse is allowed to insert an intravenous catheter in a child under 14 years old.",
+          isTrue: false,
+          explFr: "Faux. L'installation d'un cathéter intraveineux chez un enfant de moins de 14 ans ne fait pas partie du champ de pratique de l'infirmière auxiliaire.",
+          explEn: "False. Inserting an IV catheter in a child under 14 is outside the licensed practical nurse's scope of practice."
         },
         {
           fr: "Comment reconnaît-on une anaphylaxie chez un enfant ?",

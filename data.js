@@ -1842,7 +1842,7 @@ const UI_TEXT = {
     chooseVehicle: "Choisis ta machine",
     myVehicle: "Ta machine",
     vehicleGrows: "Évolue avec ton expérience",
-    maxSize: "Taille maximale atteinte!",
+    maxSize: "Forme ultime atteinte !",
     trueLabel: "Vrai",
     falseLabel: "Faux",
     tfPrompt: "Vrai ou faux?",
@@ -1917,7 +1917,7 @@ const UI_TEXT = {
     chooseVehicle: "Choose your machine",
     myVehicle: "Your machine",
     vehicleGrows: "Evolves with your experience",
-    maxSize: "Maximum size reached!",
+    maxSize: "Ultimate form reached!",
     trueLabel: "True",
     falseLabel: "False",
     tfPrompt: "True or false?",
@@ -2102,7 +2102,10 @@ const TROPHIES = [
     check: (state) => (state.loginDays || []).length >= 3 },
   { id: "t_matcher", name_fr: "Bon association", name_en: "Great Match", icon: "🧩",
     desc_fr: "Réussir 15 questions d'association de termes", desc_en: "Complete 15 term-matching questions",
-    check: (state) => (state.matchesCompleted || 0) >= 15 }
+    check: (state) => (state.matchesCompleted || 0) >= 15 },
+  { id: "t_ultime", name_fr: "Forme ultime", name_en: "Ultimate Form", icon: "🌟",
+    desc_fr: "Faire évoluer ton avatar jusqu'à sa forme finale", desc_en: "Evolve your avatar to its final form",
+    check: (state) => state.xp >= VEHICLE_GROWTH.maxXP }
 ];
 
 /* ---- Palmarès (données d'exemple — classe fictive) ----

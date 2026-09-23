@@ -1950,14 +1950,17 @@ const UI_TEXT = {
   }
 };
 
-/* ---- Paliers de niveau (basés sur XP total) ---- */
+/* ---- Paliers de niveau (basés sur XP total) ----
+   Seuils recalibrés sur le maximum réel de 5270 XP (voir VEHICLE_GROWTH plus haut) ;
+   l'ancien seuil « Maître » à 3500 était hérité du moteur SASI et faisait plafonner
+   l'avatar bien avant la fin des 180 questions (bug signalé par Jessica, 23 sept. 2026). */
 const LEVELS = [
   { min: 0,    name_fr: "Novice",       name_en: "Novice",     avatarStage: 0 },
-  { min: 200,  name_fr: "Apprenti(e)",  name_en: "Apprentice", avatarStage: 2 },
-  { min: 500,  name_fr: "Compétent(e)", name_en: "Competent",  avatarStage: 4 },
-  { min: 1000, name_fr: "Chevronné(e)", name_en: "Seasoned",   avatarStage: 6 },
-  { min: 2000, name_fr: "Expert(e)",    name_en: "Expert",     avatarStage: 9 },
-  { min: 3500, name_fr: "Maître",       name_en: "Master",     avatarStage: 11 }
+  { min: 300,  name_fr: "Apprenti(e)",  name_en: "Apprentice", avatarStage: 2 },
+  { min: 750,  name_fr: "Compétent(e)", name_en: "Competent",  avatarStage: 4 },
+  { min: 1500, name_fr: "Chevronné(e)", name_en: "Seasoned",   avatarStage: 6 },
+  { min: 3000, name_fr: "Expert(e)",    name_en: "Expert",     avatarStage: 9 },
+  { min: 5270, name_fr: "Maître",       name_en: "Master",     avatarStage: 11 }
 ];
 /* ---- Personnages d'avatar (créatures légendaires, évolutives) ----
    Chaque personnage est rendu par un emoji qui change de stade avec le XP
@@ -2067,7 +2070,11 @@ const AVATAR_COLORS = [
 const VEHICLE_TYPES = [
   { id: "aucun", name_fr: "—", name_en: "—" }
 ];
-const VEHICLE_GROWTH = { minHeight: 78, maxHeight: 178, maxXP: 3500 };
+// maxXP = XP max réellement atteignable pour un parcours parfait (180 questions,
+// 10 compétences × 3 paliers × 6 questions) selon la formule de xpGained dans app.js.
+// Si le contenu change (nb de questions/compétences), recalculer cette valeur —
+// sinon l'avatar/véhicule plafonne trop tôt (bug signalé par Jessica, 23 sept. 2026).
+const VEHICLE_GROWTH = { minHeight: 78, maxHeight: 178, maxXP: 5270 };
 const CABIN_CONTROLS = {};
 
 /* ---- Trophées (méta-réussites) ---- */

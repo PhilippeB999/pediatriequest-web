@@ -216,8 +216,10 @@ function shadeColor(hex, amt) {
   return "#" + (0x1000000 + r * 0x10000 + g * 0x100 + b).toString(16).slice(1);
 }
 
+// 5270 = XP max pour un parcours parfait des 180 questions (voir le commentaire sur
+// VEHICLE_GROWTH.maxXP dans data.js — les deux doivent rester synchronisés).
 function avatarStageForXP(xp) {
-  return Math.max(0, Math.min(11, Math.floor((xp / 3500) * 12)));
+  return Math.max(0, Math.min(11, Math.floor((xp / 5270) * 12)));
 }
 
 /* Avatar = emoji du stade courant (modèle SASI : de l œuf à la créature légendaire). */

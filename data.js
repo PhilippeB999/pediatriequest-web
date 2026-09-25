@@ -1968,87 +1968,87 @@ const LEVELS = [
    avatarStage de LEVELS. */
 const AVATAR_CHARACTERS = [
  {
-  "id": "dragon",
-  "name_fr": "Dragon",
-  "name_en": "Dragon",
-  "title_fr": "Le Sage",
-  "title_en": "The Sage",
-  "stages": [
-   "🥚",
-   "🥚",
-   "🦎",
-   "🦎",
-   "🐲",
-   "🐲",
-   "🐉",
-   "🐉",
-   "🐉",
-   "🐉",
-   "🐉",
-   "🐉"
-  ]
- },
- {
-  "id": "licorne",
-  "name_fr": "Licorne",
-  "name_en": "Unicorn",
-  "title_fr": "La Guérisseuse",
-  "title_en": "The Healer",
-  "stages": [
-   "🥚",
-   "🥚",
-   "🐴",
-   "🐴",
-   "🦄",
-   "🦄",
-   "🦄",
-   "🦄",
-   "🦄",
-   "🦄",
-   "🦄",
-   "🦄"
-  ]
- },
- {
-  "id": "phenix",
-  "name_fr": "Phénix",
-  "name_en": "Phoenix",
-  "title_fr": "Le Résilient",
-  "title_en": "The Resilient One",
+  "id": "hibou",
+  "name_fr": "Hibou",
+  "name_en": "Owl",
+  "title_fr": "Le Veilleur",
+  "title_en": "The Watcher",
   "stages": [
    "🥚",
    "🥚",
    "🐣",
    "🐣",
-   "🐦",
-   "🐦",
-   "🦅",
-   "🦅",
-   "🦅",
-   "🦅",
-   "🦅",
-   "🦅"
+   "🐤",
+   "🐤",
+   "🦉",
+   "🦉",
+   "🦉",
+   "🦉",
+   "🦉",
+   "🦉"
   ]
  },
  {
-  "id": "griffon",
-  "name_fr": "Griffon",
-  "name_en": "Griffin",
-  "title_fr": "Le Courageux",
-  "title_en": "The Brave One",
+  "id": "renard",
+  "name_fr": "Renard",
+  "name_en": "Fox",
+  "title_fr": "Le Malicieux",
+  "title_en": "The Sly One",
   "stages": [
    "🥚",
    "🥚",
-   "🐱",
-   "🐱",
-   "🦁",
-   "🦁",
-   "🦁",
-   "🦁",
-   "🦁",
-   "🦁",
-   "🦁",
-   "🦁"
+   "🐶",
+   "🐶",
+   "🦊",
+   "🦊",
+   "🦊",
+   "🦊",
+   "🦊",
+   "🦊",
+   "🦊",
+   "🦊"
+  ]
+ },
+ {
+  "id": "ourson",
+  "name_fr": "Ourson",
+  "name_en": "Bear Cub",
+  "title_fr": "Le Câlin",
+  "title_en": "The Cuddly One",
+  "stages": [
+   "🥚",
+   "🥚",
+   "🐨",
+   "🐨",
+   "🐻",
+   "🐻",
+   "🐻",
+   "🐻",
+   "🐻",
+   "🐻",
+   "🐻",
+   "🐻"
+  ]
+ },
+ {
+  "id": "lapin",
+  "name_fr": "Lapin",
+  "name_en": "Rabbit",
+  "title_fr": "La Curieuse",
+  "title_en": "The Curious One",
+  "stages": [
+   "🥚",
+   "🥚",
+   "🐰",
+   "🐰",
+   "🐰",
+   "🐰",
+   "🐰",
+   "🐰",
+   "🐰",
+   "🐰",
+   "🐰",
+   "🐰"
   ]
  }
 ];

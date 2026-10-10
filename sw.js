@@ -3,10 +3,11 @@
    Ensuite, l'app se lance sans réseau, exactement comme une app native.
    ⚠️ Bumper la version du CACHE à CHAQUE déploiement (pediatriequest-v1 -> v2 ...). */
 
-const CACHE = "pediatriequest-v14";
+const CACHE = "pediatriequest-v15";
 const ASSETS = [
   "index.html",
   "theme-saisonnier.js",
+  "messagerie.js",
   "app.js",
   "data.js",
   "style.css",
